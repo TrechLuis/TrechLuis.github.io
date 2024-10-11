@@ -1,0 +1,261 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+@font-face {
+    font-family: 'fuente1';
+    src: url(/Fuentes/fuente1.otf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(37, 30, 38, 0.6), rgb(38, 30, 38)), url(img/fondo.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Encabezado */
+.contenedor-header {
+    background: #2f293d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo {
+    margin-left: 0; /* Elimina cualquier margen que se pueda aplicar al logo de texto */
+    padding: 0;
+}
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 30px;
+    color: #faf9fa;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-header header .logo a:hover {
+    color: #921cb6;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #921cb6;
+}
+
+.nav-responsive {
+    background-color: #921cb6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* Responsive nav */
+@media screen and (max-width: 980px) {
+    nav {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 20px; /* Ajustado para alinearse correctamente */
+        top: 60px; /* Ajustado según el tamaño del header */
+        background-color: #2e252d;
+        width: 180px;
+        border-radius: 5px; /* Opcional: para esquinas redondeadas */
+        padding: 10px 0;
+    }
+
+    nav.responsive ul {
+        display: block !important;
+    }
+
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+
+
+/* Main Section */
+.main {
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.main__title {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    width: 48%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .main__title {
+        font-size: 36px;
+    }
+}
+
+
+/* Formulario */
+.form_task {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.form__label {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.form__input, .form__textarea {
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form__button {
+    padding: 0.75em;
+    background-color: #921cb6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+    background-color: #7a1593;
+}
+
+/* Tareas */
+.tasks__item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.tasks__item p {
+    color: white;
+}
+
+/* Estilos adicionales para tareas completadas y botones de acción */
+.done {
+    text-decoration: line-through;
+}
+
+.bx-check {
+    color: green;
+    cursor: pointer;
+}
+
+.bx-trash {
+    color: red;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f293d;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas</title>
+    <link rel="stylesheet" href="estiloTarea.css" />
+  </head>
+
+  <body>
+    <div class="contenedor-header">
+      <header>
+          
+          <div class="logo">
+              <a href="#">CREA Salud mental</a>
+          </div>
+          <nav id="nav">
+              <ul>
+                  <li><a href="index.html" onclick="seleccionar()">INICIO</a></li>
+                  <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                  <li><a href="#portfolio" onclick="seleccionar()">INSTALACIONES</a></li>
+                  <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                  <li><a href="tareas.html" onclick="seleccionar()">TUS DUDAS</a></li>
+              </ul>
+          </nav>
+          
+          <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+            <i class="bx bx-menu"></i>
+        </div>
+      </header>
+  </div>
+
+  <main class="main">
+    <h1 class="main__title">Escribime tus dudas</h1>
+    <div class="container">
+      <section class="section section-form">
+        <h2 class="section__title">Un leve comentario sobre tus problemas</h2>
+        <form class="form_task">
+          <label class="form__label" for="nameInput">Nombre y Apellido: </label>
+          <input class="form__input" id="nameInput" type="text" />
+          
+          <label class="form__label" for="phoneInput">Teléfono: </label>
+          <input class="form__input" id="phoneInput" type="tel" pattern="\d*"/>
+          
+          <label class="form__label" for="taskInput">Mensaje: </label>
+          <textarea class="form__input form__textarea" id="taskInput" rows="4" maxlength="60"></textarea>
+          
+          <button class="form__button" type="submit">Enviar Formulario</button>
+        </form>
+        <div class="error"></div>
+      </section>
+      
+      <section class="section section-list">
+        <h2 class="section__title">Lista de dudas</h2>
+        <ul id="taskList" class="tasks">
+          <!-- Aquí se mostrarán las tareas dinámicamente -->
+        </ul>
+      </section>
+    </div>
+  </main>
+    <footer class="footer">
+      <small>Crea Salud Mental</small>
+    </footer>
+
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
